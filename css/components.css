@@ -1,0 +1,223 @@
+:root {
+  --box-shadow: box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.289);
+  --main-color-1: #73C3F4;
+  --main-color-2: #DD71C6; 
+  --secondary-color-3: #FFD900;
+  --text-color: #333333;
+  --text-color-light: #ffffff;
+  --text-color-deco-1: #0083D3;
+  --text-color-deco-2: #DD71C6;
+  --text-color-deco-3: #c4c4c4;
+  --bg-color-higlight: #F9F9F9;
+  --bg-color: #FFFFFF;
+}
+
+/* Text */
+h1{
+  display: none;
+}
+
+h2{
+font-size: 2rem;
+font-weight: 400;
+line-height: 51.2px;
+}
+
+h3{
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 41.4px;
+}
+
+p{
+    font-size: 18px;
+    line-height: 25.6px;
+}
+
+
+/* Buttons */
+button{
+    background-color: var(--main-color-2);
+    padding-block: 10px;
+    padding-inline: 1.8rem;
+    border: none;
+    color: var(--text-color-light);
+    font-weight: 500;
+    font-size: 16px;
+    max-width: 215px;
+    max-height: 40px;
+    cursor: pointer;
+  }
+
+.button-alternative{
+  background-color: var(--secondary-color-3);
+  margin-top: 3rem;
+  margin: auto;
+}
+
+.see-more-button{
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../images/see-more-icon.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center center;
+}
+
+.see-more-button span{
+  display: none;
+}
+
+.see-less-button{
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../images/see-more-icon.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center center;
+}
+
+
+/* Counter */
+.counter-list li{
+  display: block;
+  background-color: var(--bg-color);
+  height: 264px;
+  width: 40%;
+  border-radius: 20px;
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+  background-repeat: no-repeat;
+  background-position: center top 10%;
+  padding-inline:1rem;
+}
+  
+.counter-number{
+  font-size: 40px;
+}
+
+.counter-number span{
+  color: var(--text-color-deco-3);
+  margin-inline: 1rem;
+}
+
+.counter-label{
+  font-size: 18px;
+  text-align: center;
+}
+
+.counter-item:first-child{
+  background-image: url(../images/briefcase.svg);
+}
+
+.counter-item:nth-child(2){
+  background-image: url(../images/smile.svg);
+}
+
+.counter-item:nth-child(3){
+  background-image: url(../images/message-icon.svg);
+}
+
+.counter-item:nth-child(4){
+  background-image: url(../images/activity-icon.svg);
+}
+
+/* Info Box */
+.info-box{
+  min-width: 447px;
+  min-height: 391px;
+  width: 60%;
+  padding-block: 1.75rem;
+  padding-inline: 1.5rem;
+  background-color: var(--bg-color);
+}
+
+.info-box h3{
+  text-align: center;
+  display: block;
+  padding-bottom: 2.4rem;
+  margin-inline: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.info-box ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-inline: 1.5rem;
+}
+
+.info-box ul li{
+  font-size: 12px;
+}
+
+.info-box ul li span{
+  font-size: 1rem;
+  line-height: 27.6px;
+  margin-inline: .3rem
+}
+
+/* FAQs */
+.faq-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+  width: 100%;
+}
+
+.faq-item{
+width: 100%;
+}
+
+.faq-item .question-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-block: 1.1rem;
+  padding-inline: 1.25rem;
+  background-color: var(--bg-color-higlight);
+}
+
+.faq-item h3{
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 27.6px;
+}
+
+.faq-item p{
+  font-size: 1rem;
+  display: none;
+  background-color: var(--bg-color);
+}
+
+/* Social network icons */
+
+.social-network li span{
+  display: none;
+}
+
+.social-network li{
+  min-width: 30px;
+  min-height: 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.social-network li:first-child{
+  background-image: url(../images/ig-icon.svg);
+}
+
+.social-network li:nth-child(2){
+  background-image: url(../images/twitter-icon.svg);
+}
+
+.social-network li:last-child{
+  background-image: url(../images/fb-icon.svg);
+}
