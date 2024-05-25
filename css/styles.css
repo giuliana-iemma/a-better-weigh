@@ -109,7 +109,11 @@ align-items: center;
 .banner{
   display: grid;
   grid-template-columns: 40% 60%;
-  grid-template-areas: "info countdown";
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-areas: 
+    "title countdown"
+    "info countdown"
+    "button empty";
   max-width: 1200px;
   margin: auto;
   margin-top: 5%;
@@ -117,6 +121,7 @@ align-items: center;
 }
 
 .banner h2{
+  grid-area: title;
   font-size: 45px;
   font-weight: 400;
   line-height: 67.5px;
@@ -126,18 +131,13 @@ align-items: center;
   color: var(--text-color-deco-2);
 }
 
-.banner .info{
-  display: flex;
-  flex-direction: column;
-  padding-right: 3rem;
-  gap: 26px;
-}
-
-.info p{
+p.info{
   font-size: 16px; 
+  grid-area: info;
 }
 
 .banner .container-countdown{
+  grid-area: countdown;
   position: relative;
   height: fit-content;
   border: 2px solid transparent;
@@ -171,7 +171,7 @@ align-items: center;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 53px;
+  gap: 3.3rem;
   text-align: center;
   margin-inline: 10px;
   padding-block: 6%;
@@ -191,7 +191,6 @@ gap: 2.4rem;
   font-variant:small-caps;
   font-size: 18px;
   font-weight: 500;
-
 }
 
 .banner .countdown ul li span{
@@ -199,6 +198,10 @@ gap: 2.4rem;
   color: var(--text-color);
   font-size: 50px;
   font-weight: 500;
+}
+
+.banner button{
+  grid-area: button;
 }
 
 /* Counter */
@@ -415,7 +418,6 @@ background-size: 1.4rem;
   background-size: 1.2rem;
 }
 
-
 .info2{
   width: 40%;
   display: flex;
@@ -451,8 +453,9 @@ justify-content: space-between;
   list-style: none;
   gap: 1.3rem;
   padding:0px;
-
   }
+
+
 @media (max-width:1400px) {
   .who-is-it-for{
     background-image: url(../images/girl-circles.svg),  url(../images/who-is-it-for-ellipse.svg) 
@@ -488,14 +491,19 @@ justify-content: space-between;
   }
 
   .banner{
+    background-color: var(--bg-color);
     background-image: url(../images/banner-ellipse2.svg), url(../images/banner-ellipse1.svg), url(../images/rectangle-yellow.svg); 
     background-size: 50%, contain, 60% cover;
     background-position: left center, right center, right -70% top;
     background-repeat: no-repeat;
     margin: 0px;
-
+    padding: 2rem;
   }
 
+  .banner h2{
+    line-height: 60px;
+    font-size: 36px;
+  }
 
   .who-is-it-for{
     background-image: url(../images/girl-circles.svg); 
@@ -507,7 +515,7 @@ justify-content: space-between;
     flex-direction: column;
   }
 
-  .info{
+ footer .info{
     width: 40%;
   }
 
@@ -521,28 +529,56 @@ justify-content: space-between;
 }
 
 @media (max-width: 820px){
-  .banner{
-   
-    display: grid;
-    grid-template-rows: repeat (5, 1fr);
-    grid-template-areas: "title", "spots", "countdownd", "info", "button";
-    width: 100%;
-  }
-  
-  .banner .info{
-    width: 100%;
-    margin-left: 5rem;
-    margin-top: 2rem;
-  }
 
-  .info h2{
-    grid-area: "title";
-    width: 60%;
-    font-size: 36px;
-    line-height: 54px;
-  }
+p{
+  font-size: 16px;
+}
 
-  .info p{
-    grid-area: "info";
-  }
+
+.banner{
+  display: flex;
+  flex-direction: column;
+  background-image: url(../images/banner-ellipse6.svg), url(../images/banner-ellipse5.svg), url(../images/banner-ellipse4.svg), url(../images/rectangle-yellow.svg);
+  background-position: left center, right top 5%, right 15% bottom 20%, right -75% center;
+  background-size: auto, auto, auto, contain;
+}  
+
+ .banner h2{
+  order: 1;
+  width: 60%;
+ }
+
+ .banner .spots{
+  display: block;
+  order: 2;
+  text-align: center;
+  font-size: 16px;
+  margin-block: 2.3rem;
+ }
+ 
+ .spots span{
+  color: var(--text-color-deco-2);
+ }
+
+ .banner .container-countdown{
+  order: 3;
+  padding: 1rem;
+  margin-bottom: 2.3rem;
+}
+
+.banner .countdown{
+  gap: 1.25rem;
+  padding-block: 1rem;
+}
+
+ .banner p.info{
+  order: 4;
+  width: 60%;
+  margin-block: 1.3rem;
+ }
+
+ .banner button{
+  order: 5;
+  margin-inline: auto;
+ }
 }
