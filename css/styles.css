@@ -892,7 +892,10 @@ footer .info{
 }
 }
 
-@media (max-width: 600px) /* and (max-width: 699px) */{
+@media (max-width: 800px) /* and (max-width: 699px) */{
+ h2{
+  font-size: 24px;
+ }
 
  header{
   background-image:  url(../images/banner-ellipse5.svg), url(../images/rectangle-yellow.svg);
@@ -958,13 +961,16 @@ footer .info{
   }
 
   .counter-list{
-    flex-wrap: wrap;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: .8rem;
   }
 
   .counter-list .counter-item{
     flex: 1 1 calc(25% - 0.8rem); 
-    min-width: 25%;
+    width: 100%;
     height: 157px;
     padding-top: 1rem;
     padding-inline: .6rem;
@@ -980,5 +986,50 @@ footer .info{
 .counter-item .counter-label{
   font-size: 12px;
   min-height: auto;
+  }
+  
+  /* Who is it for */
+  .who-is-it-for{
+    background-image: url(../images/girl-circles3.svg), url(../images/who-is-it-for-ellipse4.svg);
+      background-position: center bottom 5%, right top 10%;
+      padding-bottom: 110%;
+      background-size: 80%, auto;
+  }
+
+  .who-is-it-for button {
+    margin: auto;
+  }
+
+  .who-is-it-for p{
+    font-size: 14px;
+  }
+
+  .who-for-text-container{
+    width: 100%;
+    padding-inline: .8rem;
+  }
+
+  .who-for-text-container  div  h2{
+    margin-bottom:0px;
+    }
+      
+
+  /* The team */
+  .get-to-know {
+    background-size: 50%;
+    
+  }
+  .get-to-know .container.info{
+    padding-block: 2.3rem;
+    width: 75%;
+    gap: 2.3rem;
+    }
+
+  .get-to-know p:last-of-type{
+    margin-top: 85%;
+  }
+
+  .get-to-know button{
+    margin-block: 1rem;
   }
 }

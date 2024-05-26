@@ -170,86 +170,14 @@
 
 
 
-h2{
-  font-size: 1.5rem;
-}
 
-.container{
-  width: 92%;
-}
 
-header{
-  background-image: url(../images/rectangle-yellow.svg);
-  background-size: cover;
-  background-position: right 135% top;
-}
 
-header .container-banner{
-  background: none;
-}
 
-nav{
-  background-color: transparent;
-}
 
-#burger{
-  background-size: 5rem;
-  background-position: left 5% center ;
-  padding-block: 1rem;
-}
 
-#burger li{
-margin: 0px;
-}
 
-.container-banner{
-margin-top: 2.75rem;
-}
 
-.banner h2{
-font-size: 30px;
-line-height: 1.6em;
-text-align: center;
-width: 100%;
-}
-
-.container-banner .container{
-max-width: 281px;
-}
-
-.banner .spots, .countdown p{
-font-size: 12px;
-}
-
-.banner .container-countdown{
-padding: 1rem;
-min-width: 281px;
-margin: auto;
-}
-
-#countdown-list{
-gap: 1rem;
-}
-
-#countdown-list li{
-font-size: 8px;
-gap: 1rem;
-}
-
-#countdown-list li span{
-font-size: 18px;
-}
-
-.banner p.info{
-width: 100%;
-margin-bottom: 2.5rem;
-}
-
-/* Counters */
-.banner-counters{
-background-image: url(../images/get-to-know-ellipse4.svg), url(../images/get-to-know-ellipse2.svg);
-background-position: left bottom 30%, right -60% center ;
-}
 
 .banner-counters .container{
 gap: 1.8rem;
@@ -257,27 +185,10 @@ padding-block: 3.25rem;
 padding-inline: 2rem;
 }
 
-.counter-list{
-flex-wrap: wrap;
-gap: .8rem;
-}
 
-.counter-list .counter-item{
-width: 40%;
-height: 157px;
-padding-top: 1rem;
-padding-inline: .6rem;
-gap: 1rem;
-background-position: top 20% center;
-}
 
-.counter-list .counter-number{
-font-size: 18px;
-}
-.counter-item .counter-label{
-font-size: 12px;
-min-height: auto;
-}
+
+
 
 /* Who is it for */
 .who-is-it-for{
