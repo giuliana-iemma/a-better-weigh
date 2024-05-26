@@ -9,44 +9,54 @@
 </head>
 <body>  
     <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><h1>A Better Weigh, Inc</h1><a href="#"><img src="./images/logo.svg" alt="A Better Weigh, Inc Logo"></a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Book Online</a></li>
-                    <li><a href="#">Weight Loss Programs</a></li>
-                    <li><a href="#">Real Patient Stories</a></li>
-                    <li><a href="#">Locations</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Subscription</a></li>
-                </ul>
+            <nav id="menu">
+                <div class="container">
+             
+                    <ul id="burger">
+                        <li><a href="#menu">Open</a></li>
+                        <li><a href="#">Close</a></li>
+                    </ul>
+
+                    <ul id="bar">
+                        <li><h1>A Better Weigh, Inc</h1><a href="#"><img src="./images/logo.svg" alt="A Better Weigh, Inc Logo"></a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Book Online</a></li>
+                        <li><a href="#">Weight Loss Programs</a></li>
+                        <li><a href="#">Real Patient Stories</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Subscription</a></li>
+                    </ul>
+
+                </div>
             </nav>
 
-            <div class="banner">
-                    <h2>Chicago’s <span>Free</span> Medical Check-Up and Weight Loss Consultation</h2>
-                    <p class="info">Limited spots available due to the Physicians schedule and the high demand for service. No credit card or insurance required.</p>
-                    <button>Book my appointment</button>
+            <div class="container-banner">
+                <div class="container">
+                    <div class="banner">
+                        <h2>Chicago’s <span>Free</span> Medical Check-Up and Weight Loss Consultation</h2>
+                        <p class="info">Limited spots available due to the Physicians schedule and the high demand for service. No credit card or insurance required.</p>
+                        <button>Book my appointment</button>
 
-                    <p class="spots">Only <span>11 </span> spots available</p>
+                        <p class="spots">Only <span>11 </span> spots available</p>
 
-                    <div class="container-countdown">
-                        <div class="countdown-blurred"></div>
-                        <div class="countdown">
-                            <p>Your offer ends in:</p>
+                        <div class="container-countdown">
+                            <div class="countdown-blurred"></div>
+                            <div class="countdown">
+                                <p>Your offer ends in:</p>
 
-                            <ul id="countdown-list">
-                                <li>days<span id="days"></span></li>
-                                <li>hours<span id="hours"></span></li>
-                                <li>minutes<span id="minutes"></span></li>
-                                <li>seconds<span id="seconds"></span></li>
-                            </ul>
+                                <ul id="countdown-list">
+                                    <li>days<span id="days"></span></li>
+                                    <li>hours<span id="hours"></span></li>
+                                    <li>minutes<span id="minutes"></span></li>
+                                    <li>seconds<span id="seconds"></span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-
+                </div>
             </div>
-        </div>
     </header>
 
     <main>
@@ -61,7 +71,7 @@
                     </li>
 
                     <li class="counter-item">
-                        <span class="counter-number">2000 <span>+</span></span>
+                        <span class="counter-number">2000<span>+</span></span>
                         <span class="counter-label">positive reviews</span>
                     </li>
 
@@ -82,7 +92,7 @@
 
         <section class="who-is-it-for">
             <div class="container">
-                <div class="who-for-text-cointainer">
+                <div class="who-for-text-container">
                     <div>
                         <h2>Who Is The Consultation For?</h2>
                         <p>Chicago’s free medical check-up and weight loss consultation is for Chicago residents who are looking to lose weight so they can live a long, vibrant and healthy life, while looking good and not breaking the bank.</p>
@@ -99,15 +109,22 @@
         </section>
 
         <section class="get-to-know">
-            <div class="container">
+            <div class="container info">
                 <h2>We Can Help You</h2>
-                <p>For those of us who struggle with our weight
-                it’s easy to lose hope. We have seen so many tricks, gimmicks and weight loss programs that simply do not work for us. They want us to eat like a pigeon, avoid all the things we love to eat and work out till we cry. We are here to tell you that it doesn’t have to be that way. There is hope! Technology has advanced rapidly in recent years and now, with proper guidance... </p>
+                <p >For those of us who struggle with our weight
+                it’s easy to lose hope. We have seen so many tricks, gimmicks and weight loss programs that simply do not work for us. They want us to eat like a pigeon, avoid all the things we love to eat and work out till we cry. <span>We are here to tell you that it doesn’t have to be that way. There is hope! Technology has advanced rapidly in recent years and now, with proper guidance...</span> </p>
 
                 <p>You can join the ranks of our over 15,000 satisfied clients who have lost weight, regained their confidence and are living happy exuberant lives with their family. They did this without: breaking the bank, sweating buckets in intense workout programs, and most importantly, without giving up ice-cream, bread, pizza, doughnuts and all their favorite foods.</p>
             
-                <button>Book my appointment</button>
-                <img src="./images/team.jpg" alt="">
+                <button><span>Book my appointment</span></button>
+                
+                
+            <picture>
+                <source media="(min-width: 1025px)" srcset="./images/team.jpg">
+                <source media="(min-width: 320px)" srcset="./images/team2.jpg">
+                <img src="./images/team.jpg" alt="The team">
+            </picture>
+    
             </div>  
         </section>
 
@@ -252,7 +269,7 @@
                 <p>A Better Weigh Medical Weight Loss Center offers a weight loss program dedicated to helping you achieve long term weight loss success with the use of FDA approved medication.</p>
 
                 <ul class="contact-info">
-                    <li><span>Head Office: </span>1931 W 95th Streeet Chicago IL, 60643</li>
+                    <li><span>Head Office: </span>1931 W 95th Street Chicago IL, 60643</li>
                     <li><span>Phone: </span>773-496-4222</li>
                 </ul>
             </div>
