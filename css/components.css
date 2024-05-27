@@ -1,6 +1,9 @@
 :root {
-  --box-shadow: box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.289);
+  --box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  --button-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
   --main-color-1: #73C3F4;
+  --main-color-1-lighter: #B1E2FF;
+  --main-color-2-lighter: #FFB7F0  ;
   --main-color-2: #DD71C6; 
   --secondary-color-3: #FFD900;
   --text-color: #333333;
@@ -11,6 +14,7 @@
   --bg-color-higlight: #F9F9F9;
   --bg-color: #FFFFFF;
 }
+
 
 /* Text */
 h1{
@@ -37,6 +41,7 @@ p{
 
 /* Buttons */
 button{
+  box-shadow: var(--button-shadow);
     background-color: var(--main-color-2);
     padding-block: 10px;
     padding-inline: 1.6rem;
@@ -47,6 +52,15 @@ button{
     max-width: fit-content;
     max-height: 40px;
     cursor: pointer;
+  }
+
+  button:hover{
+    filter: brightness(95%);
+  }
+
+  button:active{
+    filter: brightness(105%);
+
   }
 
 .button-alternative{
@@ -68,15 +82,6 @@ button{
   display: none;
 }
 
-.see-less-button{
-  width: 2rem;
-  height: 2rem;
-  background-image: url(../images/see-more-icon.svg);
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-position: center center;
-}
-
 
 /* Counter */
 .counter-list .counter-item{
@@ -95,6 +100,7 @@ button{
   background-position: center top 10%;
   padding-inline:1rem;
   flex: 1;
+  box-shadow: var(--box-shadow);
 }
   
 .counter-number{
@@ -129,11 +135,12 @@ button{
 
 /* Info Box */
 .info-box{
-  min-width: 447px;
+/*   min-width: 447px; */
   min-height: 391px;
   width: 60%;
   padding-block: 1.75rem;
   padding-inline: 1.5rem;
+  border-radius: 1.25rem;
   background-color: var(--bg-color);
 }
 
@@ -152,14 +159,14 @@ button{
   margin-inline: 1.5rem;
 }
 
-.info-box ul li{
-  font-size: 12px;
+.info-box ul li::marker{
+  font-size: 14px;
 }
 
 .info-box ul li span{
   font-size: 1rem;
   line-height: 1.725rem;
-  margin-inline: .3rem
+  padding-left: .3rem;
 }
 
 /* FAQs */
@@ -172,6 +179,10 @@ button{
 
 .faq-item{
 width: 100%;
+background-color: var(--bg-color-higlight);
+cursor: pointer;
+transition: all 0.5s ease;
+border-radius: 1.25rem;
 }
 
 .faq-item .question-container{
@@ -181,8 +192,8 @@ width: 100%;
   justify-content: space-between;
   padding-block: 1.1rem;
   padding-inline: 1.25rem;
-  background-color: var(--bg-color-higlight);
-  border-radius: 1.25rem;
+/*   background-color: var(--bg-color-higlight);
+ */  
 }
 
 .faq-item h3{
@@ -192,12 +203,47 @@ width: 100%;
   line-height: 1.725rem;
 }
 
-.faq-item p{
-  font-size: 1rem;
+.faq-item .dropdown-content{
   display: none;
-  background-color: var(--bg-color);
 }
 
+.faq-item.active .dropdown-content {
+  display: block;
+  transition: all 0.5s ease;
+  background-color: var(--bg-color-higlight);
+  border-radius: 0px 0px 1.25rem 1.25rem;
+}
+
+.faq-item.active {
+ background-color: var(--bg-color-higlight);
+}
+
+.faq-item.active .question-container{
+  border-bottom: var(--bg-color) 2px solid;
+  border-radius: 1.25rem 1.25rem 0px 0px;
+}
+
+.faq-item.active .see-more-button{
+  background-image: url("../images/see-less-icon.svg");
+  background-size: 60%;
+}
+
+/* .faq-item.active .see-more-button::before {
+  content: "";
+  color: var(--text-color-deco-2);
+  font-weight: 800;
+} */
+
+
+.faq-item p{
+  font-size: 1rem;
+  background-color: var(--bg-color);
+  padding: 2rem;
+}
+
+.question-container button {
+  box-shadow: none;
+}
 /* Social network icons */
 
 .social-network li span{

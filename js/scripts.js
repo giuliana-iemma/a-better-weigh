@@ -93,3 +93,39 @@ const showCountdown = (arrayTimes) =>{
 }
 
 setCountdown();
+
+let dropdownMenu = function(){
+    //Selection of all the buttons "See more"
+/*     let dropdownButtons = document.querySelectorAll ('.see-more-button');
+
+    //
+    dropdownButtons.forEach (button => {
+        button.addEventListener ('click', function() {
+            let faqItem = this.closest ('.faq-item');
+
+            faqItem.classList.toggle ('active');
+        })
+    }) */
+    let faqItems = document.querySelectorAll ('.faq-item');
+
+    //Show or hide info when clicking the question
+    faqItems.forEach (item  => {
+        item.querySelector ('.question-container').addEventListener ('click', function() {
+            //Verify if the clicked item is active
+            let isActive = item.classList.contains ('active');
+
+            //Close all
+            faqItems.forEach (faq => faq.classList.remove('active'));
+
+            //Show the clicked one if it's not active. 
+            if (!isActive){
+                item.classList.add ('active');
+            }
+        })
+    }) 
+    
+    //Hide info when clicking other question
+    
+}
+
+dropdownMenu();
