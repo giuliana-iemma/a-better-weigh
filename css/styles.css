@@ -523,8 +523,6 @@ header .container{
   display: none;
 }
 
-
-
 nav{
   position: absolute;
   z-index: 3;
@@ -538,6 +536,8 @@ nav.active{
   height: 100vh;
   position: fixed;
   background-color: var(--bg-color);
+  overflow: scroll;
+
 }
 
 nav #bar{
@@ -545,10 +545,9 @@ nav #bar{
   /* right: -100vw; */
   display: none;
   position: fixed;
-  height: 100vh;
+  height: fit-content;
   position: absolute;
   background-color: var(--bg-color);
-  overflow: hidden;
 }
 
 #bar li{
