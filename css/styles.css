@@ -537,7 +537,6 @@ nav.active{
   position: fixed;
   background-color: var(--bg-color);
   overflow: scroll;
-
 }
 
 nav #bar{
@@ -545,9 +544,9 @@ nav #bar{
   /* right: -100vw; */
   display: none;
   position: fixed;
-  height: fit-content;
   position: absolute;
   background-color: var(--bg-color);
+  padding-bottom: 20vh;
 }
 
 #bar li{
