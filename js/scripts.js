@@ -98,7 +98,7 @@ const showCountdown = (arrayTimes) =>{
 
 setCountdown();
 
-let dropdownMenu = function(){
+const dropdownMenu = function(){
     //Selection of all the buttons "See more"
 /*     let dropdownButtons = document.querySelectorAll ('.see-more-button');
 
@@ -133,3 +133,20 @@ let dropdownMenu = function(){
 }
 
 dropdownMenu();
+
+const menuResponsive = function (){
+    document.addEventListener('DOMContentLoaded', function() {
+        const openMenu = document.querySelector('#burger li:first-child a');
+        const nav = document.querySelector ('nav');
+        
+        openMenu.addEventListener('click', function() {
+        
+            const menuBar = document.getElementById ('bar');
+            menuBar.classList.toggle ('active');
+            nav.classList.toggle ('active');
+        });
+
+    });
+}
+
+menuResponsive();

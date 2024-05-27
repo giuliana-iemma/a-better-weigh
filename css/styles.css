@@ -523,58 +523,36 @@ header .container{
   display: none;
 }
 
-nav:target{
+/* nav:target{
   height: 100vh;
   position: fixed;
 
-}
-
-nav:target #bar{
-  display: block;
-  width: 100%;
-  overflow: scroll;
-}
-
-nav:target #burger li:first-child{
-  display: none;
-}
-
-nav:target #burger li:last-child{
-  display: block;
-}
-
+} */
 nav{
   position: absolute;
   z-index: 3;
   top: 0;
   right: 0;
   width: 100%;
-  background-color: var(--bg-color);
-  transition: all 0.2s ease;
+  transition: all 0.2s ease;  
+  transition: all 0.5s ease;
+
 }
 
-#burger li{
-  text-indent: -100px;
-  overflow: hidden;
-  margin-top: 1rem;
-  width: 2.5rem;
+nav.active{
+  height: 100vh;
+  position: fixed;
 }
 
-#burger li a{
-  background: url(../images/burger.svg) no-repeat center center;
-  background-size: 25px;
+nav #bar{
+  position: fixed;
+  height: 100vh;
   display: block;
-  height: 2rem;
-  margin-block: auto;
-}
-
-#bar{
-  width: 0;
+  width: 100%;
   position: absolute;
-  right: 0;
-  height: calc(100vh - 8rem);
+  right: -100vw;
   background-color: var(--bg-color);
-  transition: width 0.3s ease;
+  transition: all 0.5s ease;
   overflow: hidden;
 }
 
@@ -596,6 +574,50 @@ nav{
 #bar li a:active{
   color: var(--text-color-deco-1);
 }
+
+
+/* nav:target #bar{
+  display: block;
+  width: 100%;
+  overflow: scroll;
+} */
+
+#bar.active{
+  right: 0;
+  display: block;
+  width: 100%;
+  overflow: scroll;
+}
+
+
+
+
+
+/* nav:target #burger li:first-child{
+  display: none;
+}
+
+nav:target #burger li:last-child{
+  display: block;
+} */
+
+
+
+#burger li{
+  text-indent: -100px;
+  overflow: hidden;
+  margin-top: 1rem;
+  width: 2.5rem;
+}
+
+#burger li a{
+  background: url(../images/burger.svg) no-repeat center center;
+  background-size: 25px;
+  display: block;
+  height: 2rem;
+  margin-block: auto;
+}
+
 
 /* Banner */
 .container-banner{

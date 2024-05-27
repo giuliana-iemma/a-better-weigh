@@ -82,7 +82,6 @@ padding-inline: 3rem;
 
 /* Index */
 header{
-  padding-top: 1rem;
   background-color: var(--bg-color-higlight);
   background-image: url(../images/banner-ellipse2.svg), url(../images/banner-ellipse1.svg), url(../images/rectangle-yellow.svg);
   background-size: auto;
@@ -97,21 +96,30 @@ display: flex;
 flex-direction: row;
 list-style: none;
 font-size: 14px;
-gap: 36px;
+gap: 2rem;
 justify-content: center;
 align-items: center;
 }
 
- #burger{
-  display: none;
-}
-
 #bar li a{
-  transition: font-weight .5s ease;
+  display: inline-block;
 }
 
-#bar li:hover a{
-  font-weight: 500;
+#bar li{
+  margin-block: 1rem;
+  padding-bottom: .5rem;
+}
+
+#bar li:hover{
+border-bottom: 2px solid var(--text-color-deco-1);
+}
+
+#bar li a:active{
+color: var(--text-color-deco-1);
+}
+
+#burger {
+  display: none;
 }
 
 /* Banner*/
@@ -457,6 +465,7 @@ background-size: 1.2rem;
   padding-block:.2rem;
 }
 
+
 .info2 p{
   font-size: 16px;
 }
@@ -514,16 +523,15 @@ header .container{
   display: none;
 }
 
-nav:target #bar{
-  width: 100%;
+ nav.active{
+  height: 100vh;
+  position: fixed;
 }
 
-nav:target #burger li:first-child{
-  display: none;
-}
-
-nav:target #burger li:last-child{
+#bar.active{
   display: block;
+  width: 100%;
+  overflow: scroll;
 }
 
 nav{
@@ -552,10 +560,9 @@ nav{
 }
 
 #bar{
-  
   width: 0;
   position: absolute;
-  right: 0;
+  right: -100vw;
   height: calc(100vh - 8rem);
   background-color: var(--bg-color);
   transition: width 0.3s ease;
@@ -563,20 +570,21 @@ nav{
 }
 
 #bar li{
-  display: inline-block;
   font-size: 18px;
   padding-block: 2rem;
   border-bottom: 1px solid var(--bg-color-higlight);
-  margin-left: 3rem;
+  margin-inline: 3rem;
   text-align: left;
-
+  transition: all 0.5s ease;
+  padding-inline: 1rem;
 }
 
 #bar li:hover{
+  font-weight: 500;
   border-bottom: var(--main-color-1-lighter) 1px solid;
 }
 
-#bar li:hover a{
+#bar li a:active{
   color: var(--text-color-deco-1);
 }
 
@@ -853,6 +861,9 @@ background-size: 30%;
 .faq-container{
   width: 53%;
 }
+.faq-item{
+  border-radius: .9rem;
+}
 
 .faq-item .question-container{
   padding-block: .3rem;
@@ -860,6 +871,9 @@ background-size: 30%;
   border-radius: .9rem;
 }
 
+.faq-item.active .question-container{
+  border-radius: .9rem;
+}
 
 .see-more-button{
   width: .75rem;
