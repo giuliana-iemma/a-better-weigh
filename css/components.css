@@ -192,8 +192,7 @@ border-radius: 1.25rem;
   justify-content: space-between;
   padding-block: 1.1rem;
   padding-inline: 1.25rem;
-/*   background-color: var(--bg-color-higlight);
- */  
+  transition: all 0.5s ease;
 }
 
 .faq-item h3{
@@ -205,13 +204,15 @@ border-radius: 1.25rem;
 
 .faq-item .dropdown-content{
   display: none;
+  border-radius:  0px 0px 1.25rem 1.25rem;
+
 }
 
 .faq-item.active .dropdown-content {
   display: block;
   transition: all 0.5s ease;
   background-color: var(--bg-color-higlight);
-  border-radius: 0px 0px 1.25rem 1.25rem;
+
 }
 
 .faq-item.active {
@@ -219,8 +220,14 @@ border-radius: 1.25rem;
 }
 
 .faq-item.active .question-container{
-  border-bottom: var(--bg-color) 2px solid;
-  border-radius: 1.25rem 1.25rem 0px 0px;
+/*   border: 1px solid var(--main-color-2);
+ */  background-color: #e2e2e2;
+/*  border-radius: 1.25rem 1.25rem  0px 0px ;
+ */
+}
+
+.faq-item.active .question-container h3{
+  font-weight: 600;
 }
 
 .faq-item.active .see-more-button{
@@ -238,7 +245,7 @@ border-radius: 1.25rem;
 .faq-item p{
   font-size: 1rem;
   background-color: var(--bg-color);
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .question-container button {

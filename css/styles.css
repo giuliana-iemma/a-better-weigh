@@ -511,13 +511,10 @@ header .container{
   display: none;
 }
 
-#bar {
-  display: none;
-}
 
 nav:target #bar{
   display: block;
-  margin-right: 3rem;
+  width: 100%;
 }
 
 nav:target #burger li:first-child{
@@ -535,6 +532,7 @@ nav{
   right: 0;
   width: 100%;
   background-color: var(--bg-color);
+  transition: all 0.2s ease;
 }
 
 #burger li{
@@ -553,8 +551,13 @@ nav{
 }
 
 #bar{
+  width: 0;
+  position: absolute;
+  right: 0;
   height: calc(100vh - 8rem);
   background-color: var(--bg-color);
+  transition: width 0.3s ease;
+  overflow: hidden;
 }
 
 #bar li{
@@ -563,6 +566,7 @@ nav{
   border-bottom: 1px solid var(--bg-color-higlight);
   margin-left: 3rem;
   text-align: left;
+  transition: all 0.5s ease;
 }
 
 #bar li:hover{
@@ -919,6 +923,9 @@ footer .info{
 }
 
 @media (max-width: 800px) /* and (max-width: 699px) */{
+  .container{
+padding-inline: 0;  }
+  
  h2{
   font-size: 24px;
  }
