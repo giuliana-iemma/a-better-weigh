@@ -100,6 +100,7 @@ p{
 
 
 
+
 /* Counter */
 .counter-list .counter-item{
   display: block;
@@ -214,6 +215,7 @@ background-color: var(--text-color-deco-3);
   padding-block: 1.1rem;
   padding-inline: 1.25rem;
   transition: all 0.5s ease;
+  border-radius: 1.25rem;
 }
 
 .faq-item h3{
@@ -226,25 +228,22 @@ background-color: var(--text-color-deco-3);
 .faq-item .dropdown-content{
   display: none;
   border-radius:  0px 0px 1.25rem 1.25rem;
-
 }
 
 .faq-item.active .dropdown-content {
   display: block;
   transition: all 0.5s ease;
   background-color: var(--bg-color-higlight);
-
 }
 
 .faq-item.active {
  background-color: var(--bg-color-higlight);
+ transition: all .5s ease;
 }
 
 .faq-item.active .question-container{
-/*   border: 1px solid var(--main-color-2);
- */  background-color: var(--text-color-deco-3);
-/*  border-radius: 1.25rem 1.25rem  0px 0px ;
- */
+ background-color: var(--text-color-deco-3);
+  /* border-radius: 1.25rem; */
 }
 
 .faq-item.active .question-container h3{
@@ -273,7 +272,6 @@ background-color: var(--text-color-deco-3);
   box-shadow: none;
 }
 
-
 /* Social network icons */
 .social-network li span{
   display: none;
@@ -285,6 +283,15 @@ background-color: var(--text-color-deco-3);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
+  cursor: pointer;
+}
+
+.social-network li:hover{
+  filter: brightness(105%);
+}
+
+.social-network li:active{
+  filter: brightness(95%);
 }
 
 .social-network li:first-child{
@@ -299,3 +306,6 @@ background-color: var(--text-color-deco-3);
   background-image: url(../images/fb-icon.svg);
 }
 
+.nav-footer ul li a:hover{
+  color: var(--text-color-deco-1);
+}

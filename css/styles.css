@@ -465,6 +465,7 @@ background-size: 1.2rem;
   padding-block:.2rem;
 }
 
+
 .info2 p{
   font-size: 16px;
 }
@@ -869,6 +870,9 @@ background-size: 30%;
 .faq-container{
   width: 53%;
 }
+.faq-item{
+  border-radius: .9rem;
+}
 
 .faq-item .question-container{
   padding-block: .3rem;
@@ -876,6 +880,9 @@ background-size: 30%;
   border-radius: .9rem;
 }
 
+.faq-item.active .question-container{
+  border-radius: .9rem;
+}
 
 .see-more-button{
   width: .75rem;
