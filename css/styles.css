@@ -241,7 +241,7 @@ p.info{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4.2rem;
+  gap: 2rem;
 }
 
 .counter-list{
@@ -645,12 +645,13 @@ nav:target #burger li:last-child{
  
  .spots span{
   color: var(--text-color-deco-2);
+  font-weight: 700;
  }
 
 
  .banner p.info{
   order: 4;
-  width: 60%;
+  width: 70%;
   margin-block: 1.5rem;
   margin-top: 3rem;
  }
@@ -768,12 +769,13 @@ background-size: 30%;
 .get-to-know p{
   margin-bottom: 0px;
 }
+
 .get-to-know .container.info{
   display: flex;
   flex-direction: column;
   text-align: left;
   margin-inline: auto;
-  width: 53%;
+  width: 65%;
   gap: 3.5rem;
 }
 
@@ -838,8 +840,8 @@ background-size: 30%;
 
 /* Free consultation */
 .free-consultation h2{
-  width: 100%;
-  padding-right: 35%;
+  width: 85%;
+  padding-right: 10%;
   position: relative;
 }
 
@@ -856,6 +858,9 @@ background-size: 30%;
   gap: 2.75rem;
 }
 
+.info-box{
+  width: 85%;
+}
 .info-box{
   padding-inline: 4rem;
   padding-block: 2.7rem;
@@ -878,12 +883,14 @@ background-size: 30%;
 /* faqs */
 .faqs .container h2{
   display: block;
-  width: 53%;
+  width: 80%;
   margin-left: 0px;
   text-align: left;
+  padding-inline: 2rem;
 }
+
 .faq-container{
-  width: 53%;
+  width: 80%;
 }
 .faq-item{
   border-radius: .9rem;
@@ -962,7 +969,7 @@ footer .info{
 }
 }
 
-@media (max-width: 800px){
+@media (max-width: 700px){
   .container{
 padding-inline: 0;  }
   
@@ -1098,7 +1105,7 @@ padding-inline: 0;  }
   }
   .get-to-know .container.info{
     padding-block: 2.3rem;
-    width: 75%;
+    width: 53%;
     gap: 2.3rem;
     }
 
@@ -1107,6 +1114,7 @@ padding-inline: 0;  }
   }
 
   /* Free consultation */
+
   .free-consultation h2{
     width: 100%;
     padding-right: 10%;
@@ -1136,11 +1144,14 @@ padding-inline: 0;  }
     padding-left: 3rem;
     padding-right: 1.25rem;
   }
+
   .faqs .container h2{
     width: 100%;
-  }
+/*     padding-right: 20%;
+ */  }
 
   .faq-container{
+    padding-inline: 0px;
     width: 100%;
     margin-bottom: 0px;
   }
