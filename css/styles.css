@@ -523,36 +523,31 @@ header .container{
   display: none;
 }
 
-/* nav:target{
-  height: 100vh;
-  position: fixed;
 
-} */
+
 nav{
   position: absolute;
   z-index: 3;
   top: 0;
   right: 0;
   width: 100%;
-  transition: all 0.2s ease;  
-  transition: all 0.5s ease;
-
+  background-color: none;
 }
 
 nav.active{
   height: 100vh;
   position: fixed;
+  background-color: var(--bg-color);
 }
 
 nav #bar{
+  /*  width: 0%; */ /* Other way to hide the nav */
+  /* right: -100vw; */
+  display: none;
   position: fixed;
   height: 100vh;
-  display: block;
-  width: 100%;
   position: absolute;
-  right: -100vw;
   background-color: var(--bg-color);
-  transition: all 0.5s ease;
   overflow: hidden;
 }
 
@@ -575,33 +570,13 @@ nav #bar{
   color: var(--text-color-deco-1);
 }
 
-
-/* nav:target #bar{
-  display: block;
-  width: 100%;
-  overflow: scroll;
-} */
-
 #bar.active{
   right: 0;
   display: block;
   width: 100%;
   overflow: scroll;
+  transition: all .5 ease;
 }
-
-
-
-
-
-/* nav:target #burger li:first-child{
-  display: none;
-}
-
-nav:target #burger li:last-child{
-  display: block;
-} */
-
-
 
 #burger li{
   text-indent: -100px;
@@ -618,11 +593,31 @@ nav:target #burger li:last-child{
   margin-block: auto;
 }
 
+/* Responsive menu without js*/
+/* nav:target{
+  height: 100vh;
+  position: fixed;
+} */
+
+/* nav:target #bar{
+  display: block;
+  width: 100%;
+  overflow: scroll;
+} */
+
+/* nav:target #burger li:first-child{
+  display: none;
+}
+
+nav:target #burger li:last-child{
+  display: block;
+} */
+
 
 /* Banner */
 .container-banner{
   position: relative;
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 
 .banner{
@@ -969,7 +964,7 @@ footer .info{
 }
 }
 
-@media (max-width: 800px) /* and (max-width: 699px) */{
+@media (max-width: 800px){
   .container{
 padding-inline: 0;  }
   
@@ -991,7 +986,7 @@ padding-inline: 0;  }
   background-color: transparent;
  }
 
- nav:target {
+ nav.active {
   background-color: var(--bg-color);
  }
 
