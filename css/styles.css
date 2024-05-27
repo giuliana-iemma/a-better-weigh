@@ -1,24 +1,5 @@
+/* Typography */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-@import url("components.css");
-
-:root {
-  --box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
-  --button-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
-  --main-color-1: #73C3F4;
-  --main-color-1-lighter: #B1E2FF;
-  --main-color-2-lighter: #FFB7F0  ;
-  --main-color-2: #DD71C6; 
-  --secondary-color-3: #FFD900;
-  --text-color: #333333;
-  --text-color-light: #ffffff;
-  --text-color-deco-1: #0083D3;
-  --text-color-deco-2: #DD71C6;
-  --text-color-deco-3: #c4c4c4;
-  --bg-color-higlight: #F9F9F9;
-  --bg-color: #FFFFFF;
-}
-
 
 /* // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900
@@ -48,6 +29,28 @@
   font-style: italic;
 }*/
 
+/* Components */
+@import url("components.css");
+
+/* Colors */
+:root {
+  --box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  --button-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+  --main-color-1: #73C3F4;
+  --main-color-1-lighter: #B1E2FF;
+  --main-color-2-lighter: #FFB7F0  ;
+  --main-color-2: #DD71C6; 
+  --secondary-color-3: #FFD900;
+  --text-color: #333333;
+  --text-color-light: #ffffff;
+  --text-color-deco-1: #0083D3;
+  --text-color-deco-2: #DD71C6;
+  --text-color-deco-3: #c4c4c4;
+  --bg-color-higlight: #F9F9F9;
+  --bg-color: #FFFFFF;
+}
+
+/* Basics */
 * {
   margin: 0;
   box-sizing: border-box;
@@ -66,20 +69,11 @@ a{
   color: var(--text-color);
 }
 
-body{
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  color: #333333;
-}
-
-h1,h2,h3,h4{
-  font-family: "Libre Baskerville", serif;
-}
-
 ul{
   padding: 0px;
 }
 
+/* DESKTOP */
 .container{
 max-width: 1200px;
 margin: auto;
@@ -98,7 +92,7 @@ header{
   overflow: hidden;
 }
 
-nav ul{
+nav #bar{
 display: flex;
 flex-direction: row;
 list-style: none;
@@ -108,11 +102,23 @@ justify-content: center;
 align-items: center;
 }
 
+#bar li{
+  width: 30%;
+}
+
+#bar li a{
+  transition: font-weight .5s ease;
+}
+
+#bar li:hover a{
+  font-weight: 500;
+}
+
 #burger {
   display: none;
 }
 
-/* Banner inicial*/
+/* Banner*/
 .banner{
   display: grid;
   grid-template-columns: 40% 60%;
@@ -143,6 +149,7 @@ p.info{
   grid-area: info;
 }
 
+/* Countdown */
 .container-countdown{
   grid-area: countdown;
   position: relative;

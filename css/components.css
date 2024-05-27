@@ -1,3 +1,7 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Colors */
 :root {
   --box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
   --button-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
@@ -15,8 +19,17 @@
   --bg-color: #FFFFFF;
 }
 
-
 /* Text */
+body{
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #333333;
+}
+
+h1,h2,h3,h4{
+  font-family: "Libre Baskerville", serif;
+}
+
 h1{
   display: none;
 }
@@ -40,19 +53,22 @@ p{
 
 
 /* Buttons */
-button{
-  box-shadow: var(--button-shadow);
-    background-color: var(--main-color-2);
-    padding-block: 10px;
-    padding-inline: 1.6rem;
-    border: none;
-    color: var(--text-color-light);
-    font-weight: 600;
-    font-size: 1rem;
-    max-width: fit-content;
-    max-height: 40px;
-    cursor: pointer;
-  }
+
+
+  button{
+    box-shadow: var(--button-shadow);
+      background-color: var(--main-color-2);
+      padding-block: 10px;
+      padding-inline: 1.6rem;
+      border: none;
+      color: var(--text-color-light);
+      font-weight: 600;
+      font-size: 1rem;
+      max-width: fit-content;
+      max-height: 40px;
+      cursor: pointer;
+      transition: all .3s ease;
+    }
 
   button:hover{
     filter: brightness(95%);
@@ -63,24 +79,25 @@ button{
 
   }
 
-.button-alternative{
-  background-color: var(--secondary-color-3);
-  margin-top: 3rem;
-  margin: auto;
-}
+  .button-alternative{
+    background-color: var(--secondary-color-3);
+    margin-top: 3rem;
+    margin: auto;
+  }
 
-.see-more-button{
-  width: 2rem;
-  height: 2rem;
-  background-image: url(../images/see-more-icon.svg);
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-position: center center;
-}
+  .see-more-button{
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../images/see-more-icon.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center center;
+  }
 
-.see-more-button span{
-  display: none;
-}
+  .see-more-button span{
+    display: none;
+  }
+
 
 
 /* Counter */
@@ -185,6 +202,10 @@ transition: all 0.5s ease;
 border-radius: 1.25rem;
 }
 
+.faq-item:hover{
+background-color: var(--text-color-deco-3);
+}
+
 .faq-item .question-container{
   display: flex;
   flex-direction: row;
@@ -221,7 +242,7 @@ border-radius: 1.25rem;
 
 .faq-item.active .question-container{
 /*   border: 1px solid var(--main-color-2);
- */  background-color: #e2e2e2;
+ */  background-color: var(--text-color-deco-3);
 /*  border-radius: 1.25rem 1.25rem  0px 0px ;
  */
 }
@@ -251,8 +272,9 @@ border-radius: 1.25rem;
 .question-container button {
   box-shadow: none;
 }
-/* Social network icons */
 
+
+/* Social network icons */
 .social-network li span{
   display: none;
 }

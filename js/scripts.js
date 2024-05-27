@@ -3,6 +3,7 @@
 //Target date for the countdown
 let present = new Date();
 let targetDate = new Date("June 13, 2024 21:00:00");
+let difference = targetDate.getTime() - present.getTime();
 
 //Variables for calculation of time
 let seconds = 1000, //miliseconds in a second
@@ -39,18 +40,21 @@ let minutesItem =  document.getElementById ('minutes');
 let secondsItem =  document.getElementById ('seconds');
 
 const setCountdown = () => {
+
+    showCountdown(convertTimes(difference));
+    
     let timer = setInterval (()=>{
         //Update the present date every 1000 milliseconds (1second)
         let present = new Date();
 
         //Difference between present and target
-        let difference = targetDate.getTime() - present.getTime(); //Milliseconds resting before getting to the target day
+        let actualDifference = targetDate.getTime() - present.getTime(); //Milliseconds resting before getting to the target day
 
        /*  console.log('dif', difference);
  */
       /*   console.log(convertTimes(difference)); */
 
-        showCountdown(convertTimes(difference));
+        showCountdown(convertTimes(actualDifference));
     }, 1000)
 }
 
